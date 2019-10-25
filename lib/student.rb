@@ -34,7 +34,7 @@ class Student
       SQL
 
       DB[:conn].execute(sql, self.name, self.grade)
-      @id = DB[:conn].execute("SELECT * FROM students")[0][0]
+      @id = DB[:conn].execute("SELECT * FROM students")
     end
 
 def self.create(name:, grade:)
