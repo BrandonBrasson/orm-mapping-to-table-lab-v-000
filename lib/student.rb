@@ -8,7 +8,6 @@ class Student
   def initialize(name, id=nil)
     @id = id
     @name = name
-
   end
 
   def self.create_table
