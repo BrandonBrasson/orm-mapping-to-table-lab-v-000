@@ -32,15 +32,14 @@ class Student
 
     VALUES (?, ?)
       SQL
-
       DB[:conn].execute(sql, self.name, self.grade)
-      @id = DB[:conn].execute("SELECT * FROM students")
+      @id = DB[:conn].execute("SELECT * FROM students")[0][0]
     end
 
 def self.create(name:, grade:)
     student = Student.new(name, grade)
     student.save
-    student
+    student !=
   end
 
 
