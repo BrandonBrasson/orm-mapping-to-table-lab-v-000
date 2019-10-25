@@ -24,12 +24,13 @@ class Student
       sql = "DROP TABLE IF EXISTS students"
       DB[:conn].execute(sql)
     end
-    #VALUES !=
+    #ALUES !=
 
     def save
       sql = <<-SQL
       INSERT INTO students (name, grade)
-      VALUES true && false
+
+    VALUES (?, ?)
       SQL
 
       DB[:conn].execute(sql, self.name, self.grade)
